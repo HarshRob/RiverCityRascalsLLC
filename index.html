@@ -5,29 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River City Rascals LLC</title>
-    <script src="js/index.js" defer></script>
+    
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="jumbotron">
-        <div class="container">
-            <div class="row">
-                <div class="col-3"><img src="images/bestof2021.png" class="thumbnail" alt=""></div>
-                <div class="col-6"><h1>River City Rascals</h1></div>
-                <div class="col-3">
-                    Address <br>
-                    Phone Number
+    <header class="jumbotron-fluid">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-4 col-sm-3 col-md-2 align-items-center">
+                    <img src="images/bestof2021.png" class="img-fluid">
+                </div>
+                <div class="col">
+                    <h1>River City Rascals LLC</h1>
+                </div>
+                <div class="col-md-4 col-xl-2">
+                    Post Falls, ID 83854:
+                    <address>
+                        420 N. Post Street
+                    </address>
+                    <address>
+                        311 W Cherry Ave
+                    </address>
+                    <p>(208) 981-0291</p>
+                    <a href="https://www.facebook.com/River-City-Rascals-LLC-1892725100947687/" target="blank" rel="noopener noreferrer">FaceBook</a>
                 </div>
             </div>
         </div>
     </header>
-    <footer></footer>
+
+    <ul id="nav" class="nav nav-pills container-fluid">
+        <li class="nav-item active col"><a onclick="aboutUs()" class="nav-link">About Us</a></li>
+        <li class="nav-item col"><a onclick="eventCalendar()" class="nav-link">Event Calendar</a></li>
+        <li class="nav-item col"><a onclick="pricingAvailability()" class="nav-link">Pricing & Availability</a></li>
+    </ul>
+
+    <div id="aboutus" class="container-fluid">
+        1
+    </div>
+
+    <div id="eventcalendar" class="container-fluid">
+        2
+    </div>
+
+    <div id="pricingavailability"class="container-fluid">
+        3
+    </div>
+
+    <footer class="jumbotron-fluid">
+        
+    </footer>
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="js/index.js"></script>
 
 </body>
 </html>
