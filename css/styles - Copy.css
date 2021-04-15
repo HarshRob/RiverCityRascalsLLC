@@ -9,22 +9,14 @@ h1{
 
 #aboutus {
     width: 100%;
-    align-content: center;
-    text-align: center;
 }
 
 #eventcalendar {
     display: none;
-    width: 100%;
-    align-content: center;
-    text-align: center;
 }
 
 #pricingavailability {
     display: none;
-    width: 100%;
-    align-content: center;
-    text-align: center;
 }
 
 .nav-item {
@@ -49,4 +41,3 @@ h1{
     text-decoration: underline;
     background-color: skyblue;
 }
-
