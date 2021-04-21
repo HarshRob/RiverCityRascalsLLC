@@ -1,10 +1,64 @@
+body {
+    font-family: "Open Sans", sans-serif; 
+}
+
+h1, h2, h3 {
+    font-family: "Lobster", cursive; 
+}
+
+h2 {
+    color: #3046C5; 
+}
+
+
+
+header h2 {
+    color: #CEC8FF; 
+}
+
+.site-footer {
+    background-image: linear-gradient(to right, #7490b1, #6091b9, #4d9fec);
+    padding: 20px 0; 
+    font-size: 1.2rem;
+}
+
+.site-footer .row {
+    max-height: 100%;
+
+}
+
+.site-footer a {
+    color: black;
+}
+
+.site-footer a i{
+    color: blue;
+}
+
+
+
+.jumbotron {
+    margin: 0;
+    padding: 30px;
+    background-image: linear-gradient(to right, #7490b1, #6091b9, #4d9fec);
+    color: white; 
+}
+
 h1{
     text-align: center;
+}
+
+
+nav {
+    background-color: #537fc0;
+    margin-bottom: 1em;
 }
 
 #nav {
     align-content: center;
     text-align: center;
+    display: flex;
+    position: relative;
 }
 
 #aboutus {
@@ -27,26 +81,20 @@ h1{
     text-align: center;
 }
 
-.nav-item {
-    background-color: gray;
-    border: solid .2em black; 
-    margin: .1em;
+
+.carousel-item {
+    max-width: 100%;
+    max-height: 50%;
 }
 
-.nav-item:hover {
-    background-color: lightgray;
+.carousel-item img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.nav-link {
-    color: black;
-}
-
-.nav-link:hover {
-    color: black;
-}
-
-.active {
-    text-decoration: underline;
-    background-color: skyblue;
-}
-
+#carouselButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100; }
