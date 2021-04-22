@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River City Rascals LLC</title>
     
-
+    
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/cal.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -80,34 +81,50 @@
         </div>
     </div>
 
+    
     <div id="eventcalendar" class="container-fluid inactiveContent">
-            <div id ="calendarcontainer">
-            <div class ="calendar">
-                <div class ="month">
-                    <i class = "fa fa-angle-left prev"></i>
-                    <div class = "date">
-                        <h1>May</h1>
-                        <p>Fri May 29, 2020</p>
-                    </div>
-                <i class="fa fa-angle-right next"></i>
-
+        <div id="calendarcontainer"class = "container">
+            <div id="header" >
+                <div id="monthDisplay"></div>
+    
+                <div>
+                    <button id="backButton">Back</button>
+                    <button id="nextButton">Next</button>
                 </div>
-                <div class="weekdays">
-                    <div>Sun</div>
-                    <div>Mon</div>
-                    <div>Tue</div>
-                    <div>Wed</div>
-                    <div>Thu</div>
-                    <div>Fri</div>
-                    <div>Sat</div>
-                </div>
-                <div class="days">
-                    
-                </div>
-                
-                
             </div>
+    
+            <div id="weekdays">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
             </div>
+    
+            <div id="calendar"></div>
+        </div>
+    
+        <div id="newEventModal">
+            <h2 id="eventTitleDisplay"></h2>
+    
+            <input id="eventTitleInput" placeholder="Event Title" />
+    
+            <button id="saveButton">Save</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
+    
+        <div id="deleteEventModal">
+            <h2>Event</h2>
+            <p id="eventText"></p>
+    
+            <button id="deleteButton">Delete</button>
+            <button id="closeButton">Close</button>
+        </div>
+    
+        <div id='modalBackDrop'></div>
+    
     </div>
     <div id="aboutus" class="container-fluid">
         <div class="row row-content">
@@ -196,6 +213,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/cal.js"></script>
     <script src="js/index.js"></script>
     
 
