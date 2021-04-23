@@ -6,21 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>River City Rascals LLC</title>
     
-
+    
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/cal.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header class="jumbotron">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-
-                <div class="col-offset-1 col">
-                    <h1>River City Rascals LLC</h1>
-                </div>
-            </div>
-        </div>
+    <header id="header"> 
+        <h1>River City Rascals LLC</h1>        
     </header>
 
     <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
@@ -35,9 +29,8 @@
                     <li id="pricingAvailabilityTab" class="nav-item"><a onclick="pricingAvailability()" class="nav-link">Pricing & Availability</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
-                    <a role="button" id="loginButton">
-                        <i class="fa fa-sign-in"></i> Login
-                    </a>
+                    <a role="button" id="loginButton"><i class="fa fa-sign-in"></i>Login</a>
+                    <a role="button" id="signoutButton" onclick="signOut()" style="display: none;"><i class="fa fa-sign-out"></i>Sign out</a>
                 </span>
             </div>
         </div>
@@ -56,11 +49,11 @@
                             <div class="form-row">
                                 <div class="form-group col-12">
                                     <label class="sr-only" for="loginEmail">Email address</label>
-                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                                    <input type="text" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
                                 </div>
                                 <div class="form-group col-12">
                                     <label class="sr-only" for="loginPassword">Password</label>
-                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                    <input type="text" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
                                 </div>
                                 <div class="col">
                                     <div class="form-check">
@@ -71,7 +64,7 @@
                             </div>
                             <div class="form-row">
                                 <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                                <button type="button" id="signIn" class="btn btn-primary btn-sm ml-1" data-dismiss="modal">Sign in</button>
                             </div>
                         </form>
                     </div>
@@ -79,37 +72,33 @@
             </div>
         </div>
     </div>
-
+    
     <div id="aboutus" class="container-fluid">
-        <div class="row row-content">
+        <div class="row">
             <div class="col-md-8 mx-auto">
                 <div id="homeCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#homeCarousel" data-slide-to="1"></li>
                         <li data-target="#homeCarousel" data-slide-to="2"></li>
+                        <li data-target="#homeCarousel" data-slide-to="3"></li>
+                        <li data-target="#homeCarousel" data-slide-to="4"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="images/kidsphoto1.jpg" alt="Photo of kids 1" />
-                            <div class="carousel-caption">
-                                <h3>Breadcrumb Trail Campground</h3>
-                                <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground.</p>
-                            </div>
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="images/kidsphoto2.jpg" alt="Photo of kids 2" />
-                            <div class="carousel-caption">
-                                <h3>React Lake Campground</h3>
-                                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-                            </div>
                         </div>
                         <div class="carousel-item">
                             <img class="d-block w-100" src="images/kidsphoto3.jpg" alt="Photo of kids 3" />
-                            <div class="carousel-caption">
-                                <h3>Chrome River Campground</h3>
-                                <p class="d-none d-sm-block">Spend a few sunny days and starry nights beneath a canopy of old-growth firs at this enchanting spot by the Chrome River.</p>
-                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/kidsphoto4.jpg" alt="Photo of kids 4" />
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/kidsphoto5.jpg" alt="Photo of kids 5" />
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
@@ -126,77 +115,57 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus architecto quam quibusdam exercitationem voluptatem, culpa consequatur minus cum rem odio ullam, quasi quis esse, necessitatibus asperiores explicabo harum doloribus? Sunt.
-            Similique architecto, eius dolore corrupti hic esse fugiat consequatur, nesciunt et sunt minus, impedit suscipit dolorum non iure vitae dolor? Vero voluptatibus esse tempora nemo quibusdam error distinctio eius dolor?
-            Similique, consectetur soluta. Harum architecto a similique. Non esse excepturi suscipit repellat provident voluptatibus praesentium vero quibusdam? Nisi amet sunt nesciunt optio perferendis nostrum, vel voluptatem minima explicabo voluptatum ut!
-            Impedit quia repudiandae ad eum odio ipsa sint et facilis, repellat vero, cupiditate inventore assumenda omnis neque perspiciatis iusto error laborum ratione, adipisci obcaecati. Explicabo vitae tempore est dicta placeat!
-            Nisi nam minima maiores fugit beatae unde inventore nulla porro, voluptatibus ipsa quidem reiciendis molestias quae recusandae! Ut, aliquid repudiandae. Repellendus repudiandae earum voluptas exercitationem cupiditate, placeat maiores numquam omnis.</div>
-            <div class="col">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum possimus reiciendis laborum praesentium voluptates error a sed esse eos reprehenderit? Natus beatae suscipit molestiae dolorum reiciendis reprehenderit soluta quod dolores.</div>
-        </div>
-    </div>
-
-    <div id="eventcalendar" class="container-fluid">
-        <div id ="calendarcontainer">
-            <div class ="calendar">
-                <div class ="month">
-                    <i class = "fa fa-angle-left prev"></i>
-                    <div class = "date">
-                        <h1>May</h1>
-                        <p>Fri May 29, 2020</p>
-                    </div>
-                    <i class="fa fa-angle-right next"></i>
-                </div>
-                <div class="weekdays">
-                    <div>Sun</div>
-                    <div>Mon</div>
-                    <div>Tue</div>
-                    <div>Wed</div>
-                    <div>Thu</div>
-                    <div>Fri</div>
-                    <div>Sat</div>
-                </div>
-                <div class="days">
-                </div>  
+        <div class="row row-content">
+            <div class="col">
+                From the first step in the morning to the last step into your arms in the evening, we give individual attention, 
+                healthy breakfasts and snacks along with fun, educational activities to help your child grow Step by Step!
+                We provide Full or Part-time care, a Preschool Program and more to help you with your busy schedule.
+                We have plenty of room for babies in our new facility!
+                We are fully licensed, accept ICCP and we were recently voted best childcare provider for 2021!
             </div>
+
         </div>
     </div>
 
-    <div id="eventModal"  class="modal fade" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Add Event</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-12">
-                                    <p id="eventHeader"></p>
-                                </div>
-                                <div class="form-group col-12">
-                                    <label class="sr-only" for="eventInput">event</label>
-                                    <input type="textarea" class="form-control form-control-sm" id="eventInput" placeholder="event">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                            </div>
-                        </form>
-                    </div>
+    <div id="eventcalendar" class="container-fluid inactiveContent">
+        <div id="calendarcontainer" class="container">
+            <div id="header">
+                <div id="monthDisplay"></div>
+                <div>
+                    <button id="backButton">Back</button>
+                    <button id="nextButton">Next</button>
                 </div>
             </div>
+            <div id="weekdays">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Tuesday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+            </div>
+            <div id="calendar"></div>
         </div>
+        <div id="newEventModal">
+            <h2 id="eventTitleDisplay"></h2>
+            <input id="eventTitleInput" placeholder="Event Title" />
+            <button id="saveButton">Save</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
+        <div id="deleteEventModal">
+            <h2>Event</h2>
+            <p id="eventText"></p>
+            <button id="deleteButton">Delete</button>
+            <button id="closeButton">Close</button>
+        </div>
+        <div id='modalBackDrop'></div>
     </div>
 
-    <div id="pricingavailability"class="container-fluid">
-        3
+    <div id="pricingavailability" class="container-fluid">
     </div>
 
-    <footer class="site-footer ">
+    <footer class="site-footer">
         <div class=container>
             <div class="row">
                 <div class="col">
@@ -213,18 +182,21 @@
                     <p>(208) 981-0291</p>
                     <a href="https://www.facebook.com/River-City-Rascals-LLC-1892725100947687/" target="blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i>acebook</a>
                 </div>
-                <div class="d-none d-md-block col-2">
+                <div class="d-none d-lg-block col-2">
                     <img src="images/bestof2021.png" class="img-fluid">
                 </div>
             </div>
         </div>
     </footer>
 
+
+
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script src="js/cal.js"></script>
     <script src="js/index.js"></script>
+    
 
 </body>
 </html>

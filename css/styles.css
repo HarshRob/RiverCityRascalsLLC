@@ -1,5 +1,6 @@
 body {
     font-family: "Open Sans", sans-serif; 
+    
 }
 
 h1, h2, h3 {
@@ -10,21 +11,30 @@ h2 {
     color: #3046C5; 
 }
 
-
+h1{
+    text-align: center;
+}
 
 header h2 {
     color: #CEC8FF; 
 }
 
+.row-content {
+    background-color: #537fc017;
+}
+
+.row {
+    margin: 1em;
+}
+
 .site-footer {
-    background-image: linear-gradient(to right, #7490b1, #6091b9, #4d9fec);
-    padding: 20px 0; 
+    background-image: linear-gradient(to right, #364F6B, #3FC1C9, #364F6B);
+    padding: 1.25em 0; 
     font-size: 1.2rem;
 }
 
 .site-footer .row {
     max-height: 100%;
-
 }
 
 .site-footer a {
@@ -35,22 +45,17 @@ header h2 {
     color: blue;
 }
 
-
-
-.jumbotron {
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    padding: 30px;
-    background-image: linear-gradient(to right, #7490b1, #6091b9, #4d9fec);
+    background-image: linear-gradient(to right, #364F6B, #3FC1C9, #364F6B);
     color: white; 
 }
 
-h1{
-    text-align: center;
-}
-
-
 nav {
-    background-color: #537fc0;
+    background-color: #364F6B;
     margin-bottom: 1em;
 }
 
@@ -62,143 +67,49 @@ nav {
 }
 
 #aboutus {
-    width: 100%;
-    align-content: center;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
 }
 
 #eventcalendar {
     display: none;
-    width: 100%;
-    align-content: center;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
 }
 
 #pricingavailability {
     display: none;
-    width: 100%;
-    align-content: center;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
 }
 
+#aboutus, #eventcalendar, #pricingavailability {
+    margin: 1em 1em;
+}
 
 .carousel-item {
-    max-width: 100%;
-    max-height: 50%;
+    background-image: linear-gradient(to right, #364F6B, #3FC1C9, #364F6B);
 }
 
 .carousel-item img {
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: 45vh;
     object-fit: contain;
 }
 
 #carouselButton {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 100; }
+    width: 4em;
+    height: 4em;
+    right: 1em;
+    bottom: 1em;
+    z-index: 100; 
+}
 
-    #calendarcontainer{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-size:62.5%;
-        width:100%;
-        height:100vh;
-        background-color:#12121F;
-        color:#eee;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .calendar {
-        width: 45rem;
-        height: 52rem;
-        background-color:#222227;
-        box-shadow: 0 0.5rem 3rem rgba(0,0,0,0.4);
-        
-    }
-    
-    .month {
-        width:100%;
-        height:12rem;
-        background-color:#167e56;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 2rem;
-        text-align: center;
-        text-shadow: 0 .3rem .5rem rgba(0,0,0,0.5);
-    }
-    
-    .month i{
-        font-size: 2.5rem;
-        cursor: pointer;
-    
-    }
-    .month h1 {
-        font-size: 3rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        margin-bottom: 1rem;
-    
-    }
-    
-    .month p {
-        font-size: 1.6rem;
-    
-    }
-    
-    .weekdays {
-        width: 100%;
-        height: 5rem;
-        padding: 0 0.4rem;
-        display: flex;
-        align-items: center;
-    }
-    
-    .weekdays div {
-        font-size: 1.5rem;
-        font-weight: 400;
-        letter-spacing: 0.1rem;
-        width: calc(44.2rem / 7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0 0.3rem 0.5 rem rgba (0, 0, 0, 0.5);
-    }
-    
-    .days {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 0.2rem;
-    }
-    
-    .days div {
-        font-size: 1.4rem;
-        margin: 0.3rem;
-        width: calc(40.2rem / 7);
-        height: 5rem;
-        justify-content: center;
-        align-items: center;
-        text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,0.5);
-        transition: background-color 0.2s;
-    }
-    
-    .days div:hover:not(.today){
-        background-color:#262626;
-        border: .2rem solid #777;
-        cursor: pointer;
-    }
-    
-    .prev-date, .next-date {
-        opacity: .5;
-    }
-    
-    .today {
-        background-color: #167e56;
-    }
+.carousel-caption {
+    background-color: rgb(0,0,0,.5);
+}
+
