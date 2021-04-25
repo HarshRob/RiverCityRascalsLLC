@@ -27,7 +27,7 @@
                 <ul class="navbar-nav">
                     <li id="aboutUsTab" class="nav-item active"><a onclick="aboutUs()" class="nav-link">About Us</a> </li>
                     <li id="eventCalendarTab" class="nav-item "><a onclick="eventCalendar()" class="nav-link">Event Calendar</a></li>
-                    <li id="pricingAvailabilityTab" class="nav-item"><a onclick="pricingAvailability()" class="nav-link">Pricing & Availability</a></li>
+                    <li id="pricingAvailabilityTab" class="nav-item"><a  class="nav-link">Pricing & Availability</a></li>
                 </ul>
                 <span class="navbar-text ml-auto">
                     <a role="button" id="loginButton"><i class="fa fa-sign-in"></i>Login</a>
@@ -150,22 +150,37 @@
             </div>
             <div id="calendar" class="col"></div>
         </div>
-        <div id="newEventModal">
-            <h2 id="eventTitleDisplay"></h2>
-            <input id="eventTitleInput" placeholder="Event Title" />
-            <button id="saveButton">Save</button>
-            <button id="cancelButton">Cancel</button>
-        </div>
-        <div id="deleteEventModal">
-            <h2>Event</h2>
-            <p id="eventText"></p>
-            <button id="deleteButton">Delete</button>
-            <button id="closeButton">Close</button>
-        </div>
-        <div id='modalBackDrop'></div>
     </div>
 
-    <div id="pricingavailability" class="container-fluid">
+
+    <div id="pricingModal" class="modal fade" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Pricing & Availability</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-12">
+                                    <label class="sr-only" for="numKids">Number of Children</label>
+                                    <input type="number" class="form-control form-control-sm" id="numKids" placeholder="Number of Children">
+                                </div>
+                                <div id="ages" class="form-group col-12">
+                                    
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="button" id="submitBtn" class="btn btn-primary btn-sm ml-1">Get Price</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="site-footer">

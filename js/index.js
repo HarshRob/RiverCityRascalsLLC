@@ -6,15 +6,15 @@ const _eventCalendarTab = document.getElementById("eventCalendarTab");
 const _pricingAvailabilityTab = document.getElementById("pricingAvailabilityTab");
 const _eventInput = document.getElementById('eventInput');
 
+
+
 //onclick functions to open the respective tabs
 function aboutUs() {
     if(_aboutUs.style.display === "none" || _aboutUs.style.display === "") {
         _aboutUs.style.display = "block";
         _eventCalendar.style.display = "none";
-        _pricingAvailability.style.display = "none";
         _aboutUsTab.classList.add('active')
         _eventCalendarTab.classList.remove('active')
-        _pricingAvailabilityTab.classList.remove('active')
     }
 }
 
@@ -22,27 +22,14 @@ function eventCalendar() {
     if(_eventCalendar.style.display === "none" || _eventCalendar.style.display === "") {
         _aboutUs.style.display = "none";
         _eventCalendar.style.display = "block";
-        _pricingAvailability.style.display = "none";
         _aboutUsTab.classList.remove('active')
         _eventCalendarTab.classList.add('active')
-        _pricingAvailabilityTab.classList.remove('active')
     }
 }
 
-function pricingAvailability() {
-    if(_pricingAvailability.style.display === "none" || _pricingAvailability.style.display === "") {
-        _aboutUs.style.display = "none";
-        _eventCalendar.style.display = "none";
-        _pricingAvailability.style.display = "block";
-        _aboutUsTab.classList.remove('active')
-        _eventCalendarTab.classList.remove('active')
-        _pricingAvailabilityTab.classList.add('active')
-    }
-}
+
 
 //carousel and modals
-const _calendarDays = document.querySelector('.days div');
-
 
 $(function() {
     $(".carousel").carousel( { interval: 2000 } );
@@ -60,6 +47,9 @@ $(function() {
 
     $("#loginButton").click(function(){
         $('#loginModal').modal('show');
+    })
+    $("#pricingAvailabilityTab").click(function(){
+        $('#pricingModal').modal('show');
     })
 });
 
@@ -97,6 +87,48 @@ function signOut() {
     loggedIn=false;
 }
 
+const numKids = document.getElementById('numKids');
+const agesDiv = document.getElementById('ages');
+const submitBtn = document.getElementById('submitBtn');
 
-//check if valid inputs
-//user is logged in
+const priceArray = [700, 650, 600];
+let numSubmits = 1;
+
+submitBtn.addEventListener("click", checkPrice); 
+numKids.addEventListener("keyup", makeAgeInputs);
+
+function makeAgeInputs () {
+    agesDiv.innerHTML = "";
+    let input = document.createElement('input');
+    for(let i = 0; i < numKids.value; i++) {
+        input.id = "age" + i;
+        input.placeholder = "Age of kid" + " " + (i+1);
+        input.style.margin = ".1em";
+        agesDiv.append(input);
+        input = document.createElement('input');
+    }
+}
+
+
+function checkPrice () {
+    let price = 0;
+    for(let i = 0; i< numKids.value; i++) {
+            
+        if(document.getElementById("age"+i).value < 2) {
+            price += priceArray[0];
+        }else if(document.getElementById("age"+i).value > 6) {
+            price += priceArray[2];
+        } else {
+            price += priceArray[1];
+        }
+    }
+    if(numKids.value > 1){
+        price *= .8; 
+    }
+    let para = document.createElement('P');
+    para.style.fontSize = "1.2em";
+    para.style.margin = ".5em";
+    para.innerText = "The estimated cost is $" + price;
+    agesDiv.append(para);
+    console.log(price);
+}

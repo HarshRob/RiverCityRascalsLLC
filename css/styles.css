@@ -29,8 +29,10 @@ header h2 {
 
 .site-footer {
     background-image: linear-gradient(to right, #364F6B, #3FC1C9, #364F6B);
-    padding: 1.25em 0; 
-    font-size: 1.2rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .site-footer .row {
@@ -111,5 +113,10 @@ nav {
 
 .carousel-caption {
     background-color: rgb(0,0,0,.5);
+}
+
+.modal-header {
+    background-color: #364F6B;
+    color: white;
 }
 
