@@ -50,7 +50,7 @@ button {
   flex-wrap: wrap;
 }
 .day {
-  width: 100px;
+  width: 12%;
   padding: 10px;
   height: 100px;
   cursor: pointer;

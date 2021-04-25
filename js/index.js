@@ -66,7 +66,7 @@ $(function() {
 const loginEmail = document.querySelector('#loginEmail');
 const loginPassword = document.querySelector('#loginPassword');
 const signIn = document.querySelector('#signIn');
-
+let loggedIn=false;
 signIn.addEventListener("click", loginAuthentication);
 
 const validUsernames = ['admin', 'parent']
@@ -80,17 +80,21 @@ function loginAuthentication() {
     if(validUsernames.includes(username) && validPasswords[usernameIndex] === password) {
         console.log(username);
         loginUser();
+    }else {
+        alert ("Incorrect username and/or password");
     }
 }
 
 function loginUser() {
     document.querySelector('#loginButton').style.display = 'none';
     document.querySelector('#signoutButton').style.display = 'block';
+    loggedIn=true;
 }
 
 function signOut() {
     document.querySelector('#loginButton').style.display = 'block';
     document.querySelector('#signoutButton').style.display = 'none';
+    loggedIn=false;
 }
 
 

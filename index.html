@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/cal.css">
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 <body>
     <header id="header"> 
@@ -129,23 +130,25 @@
 
     <div id="eventcalendar" class="container-fluid inactiveContent">
         <div id="calendarcontainer" class="container">
-            <div id="header">
-                <div id="monthDisplay"></div>
-                <div>
+            <div class="row">
+                <div id="header" class="col">
+                    <div id="monthDisplay"></div>
+            </div>
+                <div class="row">
                     <button id="backButton">Back</button>
                     <button id="nextButton">Next</button>
                 </div>
             </div>
-            <div id="weekdays">
-                <div>Sunday</div>
-                <div>Monday</div>
-                <div>Tuesday</div>
-                <div>Wednesday</div>
-                <div>Thursday</div>
-                <div>Friday</div>
-                <div>Saturday</div>
+            <div id="weekdays" class="row">
+                <div class="col">Sunday</div>
+                <div class="col">Monday</div>
+                <div class="col">Tuesday</div>
+                <div class="col">Wednesday</div>
+                <div class="col">Thursday</div>
+                <div class="col">Friday</div>
+                <div class="col">Saturday</div>
             </div>
-            <div id="calendar"></div>
+            <div id="calendar" class="col"></div>
         </div>
         <div id="newEventModal">
             <h2 id="eventTitleDisplay"></h2>
@@ -194,8 +197,9 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="js/cal.js"></script>
+    
     <script src="js/index.js"></script>
+    <script src="js/cal.js"></script>
     
 
 </body>

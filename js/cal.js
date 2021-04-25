@@ -60,7 +60,7 @@ function load(){
                 eventDiv.innerText= eventForDay.title;
                 daySquare.appendChild(eventDiv);
             }
-            daySquare.addEventListener('click', () => openModal(dayString));
+            daySquare.addEventListener('click', () => clickEvent(dayString));
         }else{
             
             daySquare.classList.add('padding');
@@ -115,5 +115,15 @@ function initButtons(){
     document.getElementById('deleteButton').addEventListener('click', deleteEvent)
     document.getElementById('closeButton').addEventListener('click', closeModal);
 }
+
+function clickEvent(dayString){
+    if (loggedIn){
+        openModal(dayString);
+    }else{
+        alert ("You are not logged in");
+    }
+};
 initButtons();
 load();
+
+
