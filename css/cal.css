@@ -2,11 +2,11 @@
   display: flex;
   margin-top: 50px;
   justify-content: center;
-  background-color: #FFFCFF;
+  background-color: #fffdfc;
 }
 
 button {
-  left: 2em;
+
   width: 75px;
   cursor: pointer;
   box-shadow: 0px 0px 2px gray;
@@ -30,7 +30,8 @@ button {
 }
 #calendarcontainer {
   width: 870px;
-  justify-content: center;
+  display: flex;
+  justify-content:center;
   font-family: sans-serif;
   
 }
@@ -38,8 +39,6 @@ button {
   width: 100%;
   display: flex;
   color: #247BA0;
-  justify-content: center;
-  align-items: center;
 }
 #weekdays div {
   width: 108px;
@@ -51,8 +50,29 @@ button {
   display: flex;
   flex-wrap: wrap;
 }
+
+@media only screen and (max-width: 600px) {
 .day {
-  width: 12%;
+  width: 11%;
+}
+}
+@media only screen and (min-width: 600px){
+  .day {
+    width: 12%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .day{
+    width:12%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .day{
+    width:13%;
+  }
+}
+
+.day {
   padding: 10px;
   height: 100px;
   cursor: pointer;
@@ -64,6 +84,8 @@ button {
   flex-direction: column;
   justify-content: space-between;
 }
+
+
 .day:hover {
   background-color: #e8faed;
 }

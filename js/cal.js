@@ -126,4 +126,4 @@ function clickEvent(dayString){
 initButtons();
 load();
 
-
+//most of the Calendar code was borrowed from a youtube video (https://www.youtube.com/watch?v=m9OSBJaQTlM)
